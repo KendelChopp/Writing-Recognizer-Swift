@@ -7,10 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026B91841F32473D0061D342 /* training_data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 026B91831F32473D0061D342 /* training_data.csv */; };
+		026B91861F3247B20061D342 /* training_data.csv in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = 026B91831F32473D0061D342 /* training_data.csv */; };
 		0285653F1F22792A00F39498 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0285653E1F22792A00F39498 /* main.swift */; };
+		028565461F2279F700F39498 /* ImageVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028565451F2279F700F39498 /* ImageVector.swift */; };
+		0285654D1F294DC800F39498 /* NNUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0285654C1F294DC800F39498 /* NNUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		026B91851F3247A40061D342 /* Copy Files (1 item) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				026B91861F3247B20061D342 /* training_data.csv in Copy Files (1 item) */,
+			);
+			name = "Copy Files (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		028565391F22792900F39498 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23,8 +38,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		026B91831F32473D0061D342 /* training_data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = training_data.csv; sourceTree = "<group>"; };
 		0285653B1F22792A00F39498 /* ChoppHandwritingRecognizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChoppHandwritingRecognizer; sourceTree = BUILT_PRODUCTS_DIR; };
 		0285653E1F22792A00F39498 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		028565451F2279F700F39498 /* ImageVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageVector.swift; sourceTree = "<group>"; };
+		0285654C1F294DC800F39498 /* NNUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +75,10 @@
 		0285653D1F22792A00F39498 /* ChoppHandwritingRecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				026B91831F32473D0061D342 /* training_data.csv */,
 				0285653E1F22792A00F39498 /* main.swift */,
+				0285654C1F294DC800F39498 /* NNUtility.swift */,
+				028565451F2279F700F39498 /* ImageVector.swift */,
 			);
 			path = ChoppHandwritingRecognizer;
 			sourceTree = "<group>";
@@ -70,8 +91,10 @@
 			buildConfigurationList = 028565421F22792A00F39498 /* Build configuration list for PBXNativeTarget "ChoppHandwritingRecognizer" */;
 			buildPhases = (
 				028565371F22792900F39498 /* Sources */,
+				0285654F1F29500400F39498 /* Resources */,
 				028565381F22792900F39498 /* Frameworks */,
 				028565391F22792900F39498 /* CopyFiles */,
+				026B91851F3247A40061D342 /* Copy Files (1 item) */,
 			);
 			buildRules = (
 			);
@@ -116,11 +139,24 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		0285654F1F29500400F39498 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				026B91841F32473D0061D342 /* training_data.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		028565371F22792900F39498 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028565461F2279F700F39498 /* ImageVector.swift in Sources */,
+				0285654D1F294DC800F39498 /* NNUtility.swift in Sources */,
 				0285653F1F22792A00F39498 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +291,7 @@
 				028565441F22792A00F39498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
