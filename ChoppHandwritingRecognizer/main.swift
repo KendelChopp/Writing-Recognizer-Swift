@@ -25,6 +25,7 @@ var weights = Array(repeating: Array(repeating: Array(repeating: Double(0), coun
     Hidden layer: 15 nodes + a bias
     Output layer: 10 nodes (0-9)
 */
+
 weights[0] = Array(repeating: Array(repeating: 0.0, count: 785), count: 15)
 weights[1] = Array(repeating: Array(repeating: 0.0, count: 16), count: 10)
 
@@ -127,7 +128,7 @@ do {
                 }
                 
                 //After forward propogation check if guess was correct
-                guess = NNUtility.getAnswer(outputs: layers[2])
+                guess = NNUtility.getAnswer(outputs: layers[layers.count-1])
                 if (guess == answer!) {
                     numCorrect = numCorrect + 1
                 }
@@ -146,12 +147,13 @@ do {
                 }
 
                 //Calculate error of remaining layers using weights and previous delta/errors
-                for layer in weights.count - 1...1 {
-                    let transposedWeights = NNUtility.transpose(input: weights[layer])
-                    for node in 1...errors[layer-1].count {
-                        let derivative = layers[layer][node-1] * (1.0-layers[layer][node-1])
+                for layer in 1...weights.count - 1 {
+                    let layerIndex = weights.count - layer
+                    let transposedWeights = NNUtility.transpose(input: weights[layerIndex])
+                    for node in 1...errors[layerIndex-1].count {
+                        let derivative = layers[layerIndex][node-1] * (1.0-layers[layerIndex][node-1])
                         
-                        errors[layer-1][node-1] = zip(transposedWeights[node-1], errors[layer]).map(*).reduce(0,+) * derivative
+                        errors[layerIndex-1][node-1] = zip(transposedWeights[node-1], errors[layerIndex]).map(*).reduce(0,+) * derivative
                         // print(errors[layer-1][node-1])
                     }
                 }

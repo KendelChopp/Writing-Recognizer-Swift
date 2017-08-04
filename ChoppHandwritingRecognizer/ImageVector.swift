@@ -4,6 +4,7 @@
 //
 //  Created by Kendel Chopp on 7/21/17.
 //  Copyright © 2017 Kendel Chopp. All rights reserved.
+//  http://kchopp.com
 //
 
 import Foundation
